@@ -1,0 +1,71 @@
+{
+  "name": "PrioQ",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "electron:build": "vue-cli-service electron:build",
+    "electron:serve": "vue-cli-service electron:serve",
+    "postinstall": "electron-builder install-app-deps",
+    "postuninstall": "electron-builder install-app-deps"
+  },
+  "main": "background.js",
+  "dependencies": {
+    "@pdftron/webviewer": "^7.2.0",
+    "@videojs/themes": "^1.0.1",
+    "core-js": "^2.6.12",
+    "jquery": "^3.5.1",
+    "katex": "^0.12.0",
+    "markdown-it": "^12.0.4",
+    "mathjax": "^3.1.2",
+    "mathjax-electron": "^3.0.0",
+    "mux.js": "^5.9.1",
+    "plotly.js-dist": "^1.58.4",
+    "sound-play": "^1.1.0",
+    "split.js": "^1.6.2",
+    "tippy.js": "^6.3.1",
+    "video.js": "^7.12.1",
+    "vue": "^3.0.0",
+    "vue-video-player": "^5.0.2",
+    "vuex": "^4.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "^4.5.13",
+    "@vue/compiler-sfc": "^3.0.0",
+    "babel-eslint": "^10.1.0",
+    "copy-webpack-plugin": "^7.0.0",
+    "electron": "9.0.0",
+    "electron-devtools-installer": "^3.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^7.0.0-0",
+    "less": "^4.1.1",
+    "less-loader": "^8.0.0",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^10.1.1",
+    "vue-cli-plugin-electron-builder": "~2.0.0-rc.6"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "license": "MIT"
+}
