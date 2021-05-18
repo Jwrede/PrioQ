@@ -7,7 +7,6 @@
 </template>
 
 <script>
-const sound = window.require("sound-play");
 const path = window.require("path");
 const { remote } = window.require("electron");
 
@@ -24,10 +23,12 @@ export default {
               "timeReached",
               this.$store.getters.getTimerIntervals[this.intervalIndex]
             );
-            sound.play(path.join(remote.app.getAppPath(), "notify.mp3"));
+            new Audio(
+              path.join(remote.app.getPath("userData"), "notify.mp3")
+            ).play();
             this.next_interval();
           }
-        }, 1000);
+        }, 10);
         this.paused = false;
       } else {
         this.stop_interval();

@@ -74,6 +74,7 @@ export default {
     },
   },
   mounted() {
+    console.log("a");
     this.$store.dispatch("init");
     document.addEventListener("keydown", this.handleShortcuts);
     document.addEventListener("keyup", (e) => delete this.keysPressed[e.key]);

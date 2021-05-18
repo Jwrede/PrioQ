@@ -75,6 +75,12 @@ app.on("ready", () => {
   if (!fs.existsSync(path.join(app.getPath("userData"), "pdfjs"))) {
     fs_extra.copy("../pdfjs", path.join(app.getPath("userData"), "pdfjs"));
   }
+  if (!fs.existsSync(path.join(app.getPath("userData"), "notify.mp3"))) {
+    fs_extra.copy(
+      "../notify.mp3",
+      path.join(app.getPath("userData"), "notify.mp3")
+    );
+  }
 
   protocol.registerFileProtocol("file", (request, callback) => {
     const pathname = decodeURI(request.url.replace("file:///", ""));
